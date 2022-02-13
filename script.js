@@ -5,6 +5,6 @@ if (hash) {
     document.body.style.margin = 0;
     document.body.style.backgroundColor = "black";
     image.src = `https://assets.scratch.mit.edu/get_image/.%2E/${hash}`;
-    image.style.width = "100%";
+    image.style.maxWidth = "100%";
     document.body.appendChild(image);
 }
