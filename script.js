@@ -10,5 +10,6 @@ if (hash) {
     document.body.style.height = "100vh";
     image.src = `https://assets.scratch.mit.edu/get_image/.%2E/${hash}`;
     image.style.maxWidth = "100%";
+    image.style.margin = "auto";
     document.body.appendChild(image);
 }
