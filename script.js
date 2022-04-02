@@ -12,7 +12,7 @@ if (search) {
     image.style.height = "auto";
 
     // title
-    document.title = search + "Assets Image Viewer";
+    document.title = `${search} Assets Image Viewer`;
 
     // body
     body.innerHTML = "";
