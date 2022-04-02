@@ -1,5 +1,5 @@
 const search = location.search.substring(1);
-body = document.body; // Gets the location.search, and then removes the first character
+var body = document.body; // Gets the location.search, and then removes the first character
 
 if (search) {
     // image
@@ -24,7 +24,7 @@ if (search) {
     body.style.height = "100vh";
     body.appendChild(image);
 } else {
-    document.getElementById("url").addEventListener("change", () => {
+    document.getElementById("url").addEventListener("change", function() {
         let elem = this.value.split(".");
         let elea = this.value.substring(8).split("/");
         if (elem[0].substring(8) === "assets" && elem[1] === "scratch" && elem[2] === "mit" && elem[3].split("/")[0] === "edu") {
