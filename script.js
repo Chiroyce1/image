@@ -1,5 +1,5 @@
-const search = location.search.substring(1),
-    body = document.body; // Gets the location.search, and then removes the first character
+const search = location.search.substring(1);
+body = document.body; // Gets the location.search, and then removes the first character
 
 if (search) {
     // image
@@ -12,10 +12,10 @@ if (search) {
     image.style.height = "auto";
 
     // title
-    document.title = search + " - view";
+    document.title = search + "Assets Image Viewer";
 
     // body
-    body.innerHTML = ""
+    body.innerHTML = "";
     body.style.margin = 0;
     body.style.backgroundColor = "black";
     body.style.display = "flex";
@@ -24,9 +24,9 @@ if (search) {
     body.style.height = "100vh";
     body.appendChild(image);
 } else {
-    document.getElementById("url").addEventListener("change", function() {
-        let elem = this.value.split(".")
-            elea = this.value.substring(8).split("/");
+    document.getElementById("url").addEventListener("change", () => {
+        let elem = this.value.split(".");
+        let elea = this.value.substring(8).split("/");
         if (elem[0].substring(8) === "assets" && elem[1] === "scratch" && elem[2] === "mit" && elem[3].split("/")[0] === "edu") {
             let assign = 1;
             if (elea[1] == "get_image") 
