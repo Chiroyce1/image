@@ -1,3 +1,11 @@
+let hash = location.href.split("#")[1];
+
+if (hash){
+    // If the link is using the older version
+    // Redirect them to the new one
+    location.replace(`/?${hash}`)
+}
+
 const search = location.search.substring(1);
 var body = document.body; // Gets the location.search, and then removes the first character
 
