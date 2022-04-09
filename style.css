@@ -11,3 +11,23 @@ body {
     border-radius: 5px;
     width: 300px;
 }
+
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+button {
+cursor: pointer;
+background-color: #0000ff;
+border: none;
+color: white;
+border-radius: 3px;
+font-size: 1em;
+padding: 10px;
+}
+
+button:hover {
+background-color: #0202c9;
+}
