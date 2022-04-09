@@ -19,15 +19,15 @@ body {
 }
 
 button {
-cursor: pointer;
-background-color: #0000ff;
-border: none;
-color: white;
-border-radius: 3px;
-font-size: 1em;
-padding: 10px;
+    cursor: pointer;
+    background-color: #0000ff;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    font-size: 1em;
+    padding: 10px;
 }
 
 button:hover {
-background-color: #0202c9;
+    background-color: #0202c9;
 }
