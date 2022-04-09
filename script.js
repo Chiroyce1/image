@@ -1,6 +1,6 @@
 let hash = location.href.split("#")[1];
 let loadBtn = document.querySelector('#load');
-let input = document.querySelector('#input')
+let input = document.querySelector('#url')
 
 if (hash) {
     // If the link is using the older version
