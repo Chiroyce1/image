@@ -39,7 +39,7 @@ if (search) {
             let assign = 1;
             if (elea[1] == "get_image")
                 assign = 3;
-            location.assign(`?${elea[assign]}`);
+            location.assign(`/image?${elea[assign]}`);
         } else
             document.getElementById("error").innerText = "This URL doesn't seem to be a URL to Scratch Assets.";
     })
