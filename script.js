@@ -16,8 +16,8 @@ let body = document.body;
 if (search) {
     // image
     let image = document.createElement("img");
-    search = decode(search);
-    image.src = `https://assets.scratch.mit.edu/${search}`;
+    const decoded = decode(search);
+    image.src = `https://assets.scratch.mit.edu/${decoded}`;
     image.style.backgroundColor = "white";
     image.style.maxWidth = "100%";
     image.style.margin = "auto";
@@ -25,7 +25,7 @@ if (search) {
     image.style.height = "auto";
 
     // title
-    document.title = `${search} Assets Image Viewer`;
+    document.title = `${decoded} Assets Image Viewer`;
 
     // body
     body.innerHTML = "";
