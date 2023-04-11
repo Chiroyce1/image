@@ -8,7 +8,7 @@ if (hash) {
 }
 
 const encode = (arg) => arg.toLowerCase().replace(/\d/g, (n) => String.fromCharCode(71 + Number(n)));
-const decode = (arg) => arg.replace(/[E-P]/g, (s) => s.codePointAt(0) - 71);
+const decode = (arg) => arg.replace(/[G-P]/g, (s) => s.codePointAt(0) - 71);
 
 const search = location.search.substring(1);
 let body = document.body;
@@ -16,7 +16,7 @@ let body = document.body;
 if (search) {
     // image
     let image = document.createElement("img");
-    const decoded = decode(search);
+    search = decode(search);
     image.src = `https://assets.scratch.mit.edu/${search}`;
     image.style.backgroundColor = "white";
     image.style.maxWidth = "100%";
