@@ -7,8 +7,8 @@ if (hash) {
     location.replace(`/image/?${hash}`);
 }
 
-const encode = (arg) => arg.replace(/\d/g, (n) => String.fromCharCode(103 + Number(n)));
-const decode = (arg) => arg.replace(/[e-p]/g, (s) => s.codePointAt(0) - 103);
+const encode = (arg) => arg.toLowerCase().replace(/\d/g, (n) => String.fromCharCode(71 + Number(n)));
+const decode = (arg) => arg.replace(/[E-P]/g, (s) => s.codePointAt(0) - 71);
 
 const search = location.search.substring(1);
 let body = document.body;
