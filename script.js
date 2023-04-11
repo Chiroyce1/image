@@ -48,7 +48,7 @@ if (search) {
         }
 
         if (url.origin === "https://assets.scratch.mit.edu") {
-            location.assign(`?${encode(url.assign)}`);
+            location.assign(`?${encode(url.pathname.slice(1))}`);
         } else {
             document.getElementById("error").innerText = "This URL doesn't seem to be a URL to Scratch Assets.";
         }
