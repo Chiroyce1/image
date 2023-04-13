@@ -7,13 +7,17 @@ if (hash) {
     location.replace(`/image/?${hash}`);
 }
 
+const encode = (arg) => arg.toLowerCase().replace(/\d/g, (n) => String.fromCharCode(71 + Number(n)));
+const decode = (arg) => arg.replace(/[G-P]/g, (s) => s.codePointAt(0) - 71);
+
 const search = location.search.substring(1);
 let body = document.body;
 
 if (search) {
     // image
     let image = document.createElement("img");
-    image.src = `https://assets.scratch.mit.edu/${search}`;
+    const decoded = decode(search);
+    image.src = `https://assets.scratch.mit.edu/${decoded}`;
     image.style.backgroundColor = "white";
     image.style.maxWidth = "100%";
     image.style.margin = "auto";
@@ -21,7 +25,7 @@ if (search) {
     image.style.height = "auto";
 
     // title
-    document.title = `${search} Assets Image Viewer`;
+    document.title = `${decoded} Assets Image Viewer`;
 
     // body
     body.innerHTML = "";
@@ -44,7 +48,7 @@ if (search) {
         }
 
         if (url.origin === "https://assets.scratch.mit.edu") {
-            location.assign(`?${elea[assign]}`);
+            location.assign(`?${encode(url.pathname.slice(1))}`);
         } else {
             document.getElementById("error").innerText = "This URL doesn't seem to be a URL to Scratch Assets.";
         }
