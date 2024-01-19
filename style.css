@@ -33,7 +33,6 @@ button {
 	color: white;
 	font-size: 1em;
 	padding: 10px;
-	margin-top: 10px;
 	width: 150px;
 	border: 2px solid #855cd6;
 	transition: all 200ms;
@@ -73,6 +72,11 @@ button:hover {
 		background-color: black;
 		color: white;
 	}
+}
+
+.inp {
+	display: flex;
+	gap: 5px;
 }
 
 @media only screen and (max-width: 600px) {
