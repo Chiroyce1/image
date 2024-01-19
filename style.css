@@ -1,36 +1,101 @@
 body {
-    background-color: black;
-    color: white;
-    text-align: center;
+	text-align: center;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	align-items: center;
+	justify-content: center;
+	min-height: 70vh;
+}
+
+h1 {
+	font-size: 3em;
+	font-weight: 300;
 }
 
 #url {
-    background-color: black;
-    color: white;
-    border: 2px solid grey;
-    border-radius: 5px;
-    width: 300px;
-    font-size: 1.5em;
-}
-
-body {
-    background-color: black;
-    color: white;
-    text-align: center;
+	border: none;
+	border-radius: 4px;
+	width: 400px;
+	padding: 5px 8px;
+	border: 2px solid #855cd6;
+	height: 30px;
+	font-family: monospace;
 }
 
 button {
-    cursor: pointer;
-    background-color: #0000ff;
-    border: none;
-    color: white;
-    border-radius: 3px;
-    font-size: 1em;
-    padding: 10px;
-    margin-top: 10px;
-    width: 150px;
+	cursor: pointer;
+	background-color: #855cd6;
+	border: none;
+	border-radius: 3px;
+	color: white;
+	font-size: 1em;
+	padding: 10px;
+	margin-top: 10px;
+	width: 150px;
+	border: 2px solid #855cd6;
+	transition: all 200ms;
 }
 
 button:hover {
-    background-color: #0202c9;
+	background-color: rgba(0, 0, 0, 0);
+	color: #855cd6;
+}
+
+/* After loading the image these are applied */
+
+#img {
+	background-color: white;
+	max-width: 100%;
+	margin: auto;
+	min-width: 100px;
+	height: auto;
+}
+
+.view-img {
+	margin: 0;
+	background-color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: black;
+		color: white;
+	}
+
+	#url {
+		background-color: black;
+		color: white;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	h1 {
+		font-size: 2em;
+	}
+
+	#url {
+		width: 100% !important;
+	}
+
+	.inp {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	button {
+		width: 105%;
+	}
+
+	body > * {
+		width: 90%;
+	}
 }

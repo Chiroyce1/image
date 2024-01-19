@@ -3,17 +3,20 @@
 
 <head>
     <title>Scratch Assets Image Viewer</title>
-    <meta name="description" content="Explore and view images from Scratch's assets.scratch.mit.edu using our intuitive image viewer.">
-    <meta name="keywords" content="Scratch, assets, image viewer, image hosting, Scratch assets viewer, interactive images, image navigation">
+    <meta name="description"
+        content="Explore and view images from Scratch's assets.scratch.mit.edu using our intuitive image viewer.">
+    <meta name="keywords"
+        content="Scratch, assets, image viewer, image hosting, Scratch assets viewer, interactive images, image navigation">
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <h1>Scratch Assets Image Viewer</h1>
-    <p>To view an image, simply paste the URL into the box and click 'Load Image'</p>
-    <input type="url" id="url"><br>
-    <button id="load">Load Image</button>
+    <div class="inp">
+        <input type="url" id="url" placeholder="Paste an assets.scratch.mit.edu link here">
+        <button id="load">Load Image</button>
+    </div>
     <p id="error"></p>
 </body>
 
